@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "45445aeb-0e60-47a2-ab6d-95d2471f561a",
+		"name": "API Gym",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19774370"
+	},
+	"item": [
+		{
+			"name": "Ejercicios",
+			"item": [
+				{
+					"name": "Traer todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejercicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejercicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"series\": \"10\",\r\n    \"repeticiones\": \"100\",\r\n    \"descanso\": \"5\",\r\n    \"nombre\": \"flexiones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ejercicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejercicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Abs\",\r\n    \"series\": \"8\",\r\n    \"repeticiones\": \"100\",\r\n    \"descanso\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ejercicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejercicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar por nombre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejercicios?nombre=cardio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejercicios"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "cardio",
+									"description": "nombre del ejercicio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/ejercicios?nombre=Abs&",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ejercicios"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Abs"
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
